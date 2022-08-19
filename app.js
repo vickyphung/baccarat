@@ -33,6 +33,7 @@ window.onload = function() {
     shuffleDeck();
     startGame();
 }
+
 function buildDeck() {
     let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
     let suits = ["C", "D", "H", "S"];
@@ -45,6 +46,7 @@ function buildDeck() {
     console.log("created deck");
     console.log(deck);
 }
+
 function shuffleDeck() {
     for (let i = 0; i < deck.length; i++) {
         let j = Math.floor(Math.random() * deck.length);
@@ -55,6 +57,7 @@ function shuffleDeck() {
     console.log("shuffled deck");
     console.log(deck);
 }
+
 function getValue(card, player) {
     let data = card.split("-"); 
     let value = data[0];
@@ -64,6 +67,8 @@ function getValue(card, player) {
         return 10;
         }
     } 
+
+
 //Boolean to check ace.
     if (isNaN(value)) { 
         let score=0;
@@ -92,6 +97,8 @@ function getValue(card, player) {
     }
  return parseInt(value);
 }
+
+
 function checkBj(){
     if ((hasAce === true) && (playerScore === 21)){
         messageDisplay.textContent = "BLACKJACK"
@@ -102,7 +109,8 @@ function startGame() {
     hidden = deck.pop();
     dealerScore += getValue(hidden, "dealer");
     console.log("Dealer Hidden Card " + hidden + "  Dealer Score  " + dealerScore)  
-//Deals a second card to the dealer hand.
+
+    //Deals a second card to the dealer hand.
     for (let i = 0; i < 1; i++) {
         let cardImg = document.createElement("img");
         let card = deck.pop();
@@ -112,7 +120,8 @@ function startGame() {
         document.getElementById("dealer-hand").append(cardImg);
     }
     console.log(dealerScore);
-    dealerScoreDisplay.textContent = ` DEALER: ?`
+    dealerScoreDisplay.textContent = `DEALER: ?`
+
 //Deals two cards to the player. Appends card images to div, which appends to the player hand. 
     for (let i = 1; i < 3; i++) {
         let cardImg = document.createElement("img");
@@ -203,15 +212,12 @@ function stay() {
     }
     else if (playerScore == dealerScore) {
         message = "Tie!";
-       
     }
     else if (playerScore > dealerScore) {
         message = `😃 You Win! YAY! 💰💰`;
-
         bank += bet;
         monies.textContent = `Bank: $${bank}`
         console.log(`You win ${bet}. Have $${bank}.`)
-   
     }
     else if (playerScore < dealerScore) {
         message = "You Lose! ㋛";
@@ -235,7 +241,6 @@ function endBank (){
         hideBtn();
         removeBet();
         messageDisplay.textContent = "No More Money :( Shuffle to restart."
-
     }
 }
 function addTen(){
@@ -255,7 +260,6 @@ function addFifty(){
     console.log("You added $50 to you bet.")
     betTotal.textContent = `Bet: ${bet}`
 }
-
 function addHundred(){
     bet += 100;
     console.log("You added $100 to you bet.")
@@ -279,7 +283,7 @@ function removeCard(){
 }
 
 function removeBet(){
-   moneyButtons.classList.add("hideButton");
+    moneyButtons.classList.add("hideButton");
 }
 function replaceBet(){
     moneyButtons.classList.remove("hideButton");
@@ -302,11 +306,12 @@ function dealHands(){
     for (let i = 0; i < 2; i++) {
         let cardImg = document.createElement("img");
         let card = deck.pop();
-      
+    
         let div = document.createElement("div");
+
         cardImg.src = "./cards/" + card + ".png";
         div.append(cardImg)
-        div.classList.add("pCards");
+        div.classList.add("playCards");
         document.getElementById("player-hand").appendChild(div);
         console.log("Player Card Dealt  " + card)
         playerScore += getValue(card);
@@ -362,7 +367,6 @@ function surrender(){
 }
 
 
-
 ////bet $, & limits
 //end game at bank=0, cxards=0
 //(ACE VALUE......... ) when ace is player first card, problem!
@@ -385,8 +389,6 @@ function surrender(){
     // creaate a hidden div, 
     // otherhand . push (playerhand.pop())
 
-//Resize for window browser
-//Mobile Friendly
 
 //Insurance
     //if dealerCardTwo is "A" = offer insurance and surrender options
@@ -400,7 +402,7 @@ function surrender(){
     // Double down option, w/ hit and stand
     //DDHIT, DDSTAND, can hit only ONCE.
 
-    //push value to array
+//push value to array
 //let cards = [];
 // inside deal and hit
 //push value to array.
@@ -422,7 +424,7 @@ function surrender(){
 //     for (let i = 1; i < 3; i++) {
 //         let cardImg = document.createElement("img");
 //         let card = deck.pop();
-    
+
 //         let div = document.createElement("div");
 //         cardImg.src = "./cards/" + card + ".png";
 //         div.append(cardImg)

@@ -20,23 +20,26 @@
         </div>
 
         <div class="bettingArea">
-            <div id="betButtons">
-                    <button id="ten" onclick=addTen()>10$</button>
-                    <button id="twenty" onclick=addTwenty()>20$</button>
-                    <button id="fifty" onclick=addFifty()>50$</button>
-                    <button id="hundred" onclick=addHundred()>100$</button>                     
-            </div>
+
             <div class="moneyScore"> 
-    
                 <div id="bank-roll" class="bank"></div>
                 <text id="totalBet" class="betTotal"></text>
             </div>
+            <div id="betButtons">
+                    <button id="ten" onclick=addTen()>$10</button>
+                    <button id="twenty" onclick=addTwenty()>$20</button>
+                    <button id="fifty" onclick=addFifty()>$50</button>
+                    <button id="hundred" onclick=addHundred()>$100</button>                     
+            </div>
+
+
         </div>
- 
+
+        <div id="msgbox" class="message">fdgsd</div>
+
         <div id="game-play" class="gamePlay">
             <div class="playerSeat">
                 <div id="player-score" class="pScore"></div>
-                <div id="msgbox" class="message"></div>
                 <div id="player-hand" class="pHand"></div>
             </div>
 
@@ -47,6 +50,7 @@
                 </div>
             </div>
         </div>
+
         <!-- <div id="playButtons">
             <button>Split</button>
             <button>Double Down</button>

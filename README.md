@@ -1,5 +1,8 @@
 # blackjack
 
+
+![Blackjack Demo](https://media.giphy.com/media/rOcNCk17eF3gva0LI3/giphy.gif)
+
 Hello,
 
 Welcome to the game of Blackjack. 
