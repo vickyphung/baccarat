@@ -1,187 +1,133 @@
-
 .wholeArea{
     width: 100vw;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
     height: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 div {
-    border: 3px solid gray;
     width: 100%;
-
+    margin: .25rem;
+    font-size: 1.5rem;
 }
-/* .card-img{
-    max-width: 100%;
-    height: auto;
-    border: 45px solid green;
-} */
-
 h1{
-    font-size: 50px;
+    font-size: 4.25rem;
     overflow: hidden;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: fit-content;
+    margin: .25rem;
+    border: 5px solid black;
+    padding: .5em;
 }
-/* .gameButtons {
-
-} */
 .gameButtons button{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
-    padding: .5rem;
-    margin: 3px;
+    padding: 1rem;
     background-color: black;
     color: white;
     letter-spacing: 2px;
     font-weight: bold;
-    line-height: 2;
-    border-radius: 10px;
+    line-height: 1.5;
+    border: 3px ;
+    border-radius: .5em;
     width: 5em;
+    margin-top: 1em;
 }
 .gameButtons button:hover {
-    background-color: rgb(240, 16, 184); 
+    background-color: #fd64a1b1; 
     color: white;
-  }
-
-.dScore,.pScore {
-    padding: 1rem;
-    /* margin-bottom: 5px; */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: auto;
-    border: .25rem solid rgb(227, 20, 182);
-    border-radius: 2.5rem;
-    
+}
+#betButtons {
+    display: flex;
+    width: fit-content;
+    gap: .25rem;
+}
+#betButtons button {
+    font-size: 1.25rem;
+    padding: .75rem;
+    background-color: black;
+    color: white;
+    border: 6px solid #FF6601;
+    border-radius:100%;
+    letter-spacing: 2px;
+}
+#betButtons button:hover {
+    background-color: #FF6601; 
+    color: white;
+}
+.bettingArea, .moneyScore {
+    display: flex;
+    width: fit-content;
+}
+.moneyScore {
+    flex-direction: column;
+    text-align: left;
+    padding: .25em;
 }
 
-.pHand, .dHand{
+.bank, .betTotal{
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: .25em;
+}
+.betTotal {
+    margin-left: 5px;
+}
+
+.messageBox {
+    display: flex;
+    /* margin: .5em; */
+}
+
+.message {
+    color: #FF6601;
+    font-size: 2rem;
+}
+.gamePlay {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 3em;
+}
+.dealerSeat, .playerSeat{
+    /* padding: 1em; */
+    width: auto;
+    /* border: .25rem solid #FE5E9E; */
+    /* border-radius: 2.5rem; */
+}
+.dScore, .pScore {
+    padding: 1rem;
+    width: 450px;
+    font-size: 2.125rem;
+    border: .25rem solid #fd64a15f;
+    border-radius: 1rem;
+    background-color: #FF6601;
+    color: white;
+    
+}
+.pHand {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /* flex-wrap: wrap; */
-    border: 5px solid orange;
     width: fit-content;
-    /* max-width: 450px; */
-    /* height: 100%; */
+    /* margin: 1em; */
+}
+.dHand {
     margin: .5em;
-    gap: 10px;
-    /* flex-direction: column; */
-
-    }
-
+    display: flex;
+    gap: .25em;
+}
 .playCards {
     /* display:inline-flex; */
     width: 32.5;
 }
-
-
 img {
-    border: 0.5rem outset rgb(223, 27, 161);
+    border: 0.5rem outset #FF6601;
     border-radius: 15px;
     padding: 5px;
     max-width: 96px;
-}
-.dHand{
-    padding-bottom: 12.5px;
-}
-
-.dealerSeat, .playerSeat{
-    border: 8px solid rgb(4, 245, 132);
-    width: 450px;
-    height: 100%;
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-}
-.message{
-    color: rgb(255, 113, 42);
-    font-size: 2.5rem;
-    padding: 1rem;
-    border: 3px solid red;
-    width: fit-content;
-    border-radius: 2rem;
-  
-}
-/* .head{
-} */
-.gamePlay {
-    font-size: 30px;
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    /* padding: 1rem; */
-    width: 100%;
-}
-
-#betButtons {
-    display: inline-flex;
-    /* height: fit-content; */
-    justify-content: center;
-    /* flex-direction: row; */
-    width: fit-content;
-    align-items: center;
-    gap: .25rem;
-}
-#betButtons button {
-    font-size: 1.5rem;
-    padding: 1.5rem;
-    /* margin: .25em; */
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    text-align: center;
-    border: 5px solid orange;
-    letter-spacing: 2px;
-    font-weight: bold;
-    border-radius: 50%;
-}
-    #betButtons button:hover {
-    background-color: rgb(23, 184, 130); 
-    color: white;
-}
-
-.betTotal {
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    border: 2.5px solid black;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    background-color: white;
-}
-
-.bettingArea{
-    /* padding: .5rem; */
-    display: flex;
-    /* flex-direction: column; */
-    justify-content:flex-start;
-    gap: .5em;
-}
-
-.moneyScore{
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-}
-.bank {
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    border: 2.5px solid green;
-    padding: 10px;
-    border-radius: 10px;
-
-    background-color: white;
 }
 .hideButton {
     visibility: hidden;
@@ -195,7 +141,9 @@ img {
 .show {
     display: inline-block;}
 
-
+.footer {
+    font-size: 1rem;
+}
 
 /* 
 
