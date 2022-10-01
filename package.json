@@ -1,0 +1,20 @@
+{
+  "name": "blackjack",
+  "version": "1.0.0",
+  "description": "Hello,",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vickyphung/blackjack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vickyphung/blackjack/issues"
+  },
+  "homepage": "https://github.com/vickyphung/blackjack#readme"
+}

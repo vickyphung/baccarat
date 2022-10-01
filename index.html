@@ -5,21 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <title>Blackjack</title>
+    <title>Baccarat</title>
 </head>
 
 <body>
     <div class="wholeArea">
-        <div class="head"><h1>BLACKJACK</h1></div>
+        <div class="head"><h1>BACCARAT</h1></div>
 
         <div id="game-buttons" class="gameButtons">          
             <button onClick="window.location.reload();">Shuffle</button>
-            <button id="hit" onclick=hit()>Hit</button>
-            <button id="stay" onclick=stay()>Stand</button>
+ 
             <button id="deal" class="carddeal" onclick=dealHands()>Deal</button>
         </div>
 
-        <div class="bettingArea">
+        <!-- <div class="bettingArea">
 
             <div class="moneyScore"> 
                 <div id="bank-roll" class="bank"></div>
@@ -31,7 +30,7 @@
                     <button id="fifty" onclick=addFifty()>$50</button>
                     <button id="hundred" onclick=addHundred()>$100</button>                     
             </div>
-        </div>
+        </div> -->
 
         <div class="messageBox">
             <div id="msgbox" class="message">Good Luck!</div>
@@ -46,16 +45,12 @@
             <div class="dealerSeat">
                 <div id="dealer-score" class="dScore"></div>        
                 <div id="dealer-hand" class="dHand">
-                    <img id="hidden" src="./cards/BACK.png">
+              
                 </div>
             </div>
         </div>
 
-        <!-- <div id="playButtons">
-            <button>Split</button>
-            <button>Double Down</button>
-            <button id="xx" onclick=surrender()>Surrender</button>
-        </div> -->
+
         <div class="footer">
             <p>
                 Written in vanilla JS. Still in development. 
